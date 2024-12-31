@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrapbook for Maureen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebf0;
+        }
+
+        .scrapbook {
+            width: 120%;
+            max-width: 1000px;
+            margin: 60px auto;
+            background: white;
+            border: 60px solid #f48fb1;
+            border-radius: 20px;
+            box-shadow: 0 100px 50px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8bbd0;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ad1457;
+            margin: 0;
+        }
+
+        .page {
+            padding: 100px;
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .page h2 {
+            text-align: center;
+            color: #ec407a;
+        }
+
+        .page p {
+            color: #5c6bc0;
+            line-height: 1.5;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        /* Folded letter effect */
+        .love-letter-container {
+            position: relative;
+            width: 80%;
+            height: 400px; /* Fixed height */
+            margin: 0 auto;
+            transform-origin: top center;
+            animation: unfold 2s ease-out forwards;
+            overflow-y: auto; /* Scroll the content */
+        }
+
+        .love-letter {
+            background: #f8bbd0;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border: 3px solid #ad1457;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.3em;
+            color: #ad1457;
+            transform: rotateX(90deg);
+            transform-origin: top;
+            opacity: 0;
+            animation: openLetter 2s ease-out forwards 0.5s;
+        }
+
+        .love-letter p {
+            margin-bottom: 20px;
+        }
+
+        .love-letter h3 {
+            text-align: center;
+            color: #d81b60;
+        }
+
+        /* Keyframes for unfolding letter */
+        @keyframes unfold {
+            0% {
+                transform: scaleY(0);
+                transform-origin: top;
+            }
+            100% {
+                transform: scaleY(1);
+                transform-origin: top;
+            }
+        }
+
+        @keyframes openLetter {
+            0% {
+                transform: rotateX(90deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateX(0);
+                opacity: 1;
+            }
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 150px;
+            justify-content: center;
+        }
+
+        .photos img {
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            border: 30px solid #8e24aa;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            transform: rotate(-5deg) perspective(500px) translateZ(0px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .photos img:nth-child(even) {
+            transform: rotate(5deg) perspective(500px) translateZ(0px);
+        }
+
+        .photos img:hover {
+            transform: rotate(0deg) perspective(500px) translateZ(20px);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .navigation button {
+            background: #ec407a;
+            color: black;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .navigation button:hover {
+            background: #d81b60;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="scrapbook">
+        <div class="header">
+            <h1>Scrapbook for Maureen</h1>
+        </div>
+
+        <!-- First Page with Folded Letter Effect -->
+        <div class="page active" id="page1">
+            <h2>Welcome, My Love</h2>
+            <div class="love-letter-container">
+                <div class="love-letter">
+                    <h3>My Dearest Maureen,</h3>
+                    <p>Out of the uncountable universe of feelings that exists inside me, I daunt to select, even the smallest part, describing my feelings towards you. It seems that  each word that I type barely has touch on the sheer feeling of love, happiness and appreciation that I am so grateful to have and as such for the upcoming letters I will attempt to express what my heart feels. You turn my world upside down which is why I dare say that you complete me. ❤️</p>
+                    <p>From your body language, the flame in your eyes, the tone of your guffaw, and the affectionate temperature of your palms, I fathom a language my spirit comprehends before the waking part of me. With you, there is always some sort of enchantment surrounding me that seems to fit perfectly wherever it is that I was missing. Our love in every second, every word breathed, every pause and every silence have shown a true love that is pure. While others look for love in grandiose displays, I’ve found it in our simplest moments: the manner in which our fingers fit perfectly together, those moments when words are unnecessary and finally the sound of your heartbeat harmonizing to that of mine.</p>
+                    <p>Life is a rainbow where there are shades of colors and curves that turn up and down, but you have been my steadfast companion. Where our difficulties have cast darkness upon our lives, you have been either a source of strength or of comfort when I needed light. Who knows what kept it, our friendship, unwaivered when everything else in between seemed to fail? Here our bond grew even stronger, glowing from within and infinitely deep. Have you ever recalled such days when everything does not exist but each other? Or the moments when our looks in each other eyes were more expressive than that thousand words? These, these are the shards of time, that are embedded into my soul, these moments I am so grateful for – the love that we had (and still have)– the love that has never gone away – the love that endures. In the sanctuary of your embrace I am at ease everyday. The confusion, the noise, all disappears and we are left here in solace enveloped by a love that looks as vast as the universe. With you I’ve discovered what it is like to really love and be loved – not just in passion and fervor, but in the stillness of long-suffering, in the gentle kindness, and in a selfless sacrificial act. The emotion you’ve painted to me is not a simple comer of feeling or infatuation but a lifelong process of exploration. I promise to be with you through thick and thin for everything that has happened and is still to happen in the future. To be the one you turn to in times of strength and adventure as well as in shortages and storms. How much I love you can’t be compared to the ocean, for its length (if it had one)longer than the sky, and longer than the life of the universe. The varieties of the stage, the vast cast of characters, and the infinite number of scenes still sit me down with a measure of thanks that we crossed paths. For in finding you, I’ve found the most ‘real’ and ‘romantic’ means to convey love. For ever will we hold our relationship dear and I look forward to our stories in the coming days.</p>
+					<p>As we continue this beautiful journey together, know that my love for you will only grow stronger with each passing day. I am so lucky to call you mine, Maureen. Thank you for being the light of my life.</p>
+                    <p>With all my heart,</p>
+                    <p>Your devoted lover,</p>
+					<p>Your's forever,</p>
+					<p>Your baby, your carorina, your everything</p>
+                    <p><strong>Paul</strong></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <button onclick="changePage(1)">scroll the above letter my dearest then press me😊</button>
+            </div>
+        </div>
+
+        <div class="page" id="page2">
+            <h2>Our Beautiful Memories</h2>
+            <p>You are mine forever. </p>
+            <div class="photos">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczMM-vuF7D1xr4uzZb3ILcqIBNYwGrqf5NupUEQCZfUpoLz5bGcX1GAQPZsPS3Pbfv8hNlnCQA15r583bu3pwT3TbAY-ESKrwmoeWCwD3w5_P4fDJwuMycyqNs76LvxMu4uPND9psgU39OrmISiFW4Gr=w521-h927-s-no-gm?authuser=0" alt="Photo 1">
+            	<p>I will cherish and love you till the end of days</p>  
+			    <img src="https://lh3.googleusercontent.com/pw/AP1GczPDWIktOSuiRWeGs-CFpl3ho7oZvb6AWYmw2TJOYSmFm3Wq2H5faUdEicPQcf8AVGreJFthYHt3Ab-YaDFeJtYwiSL7XfksKTn0LxidS4zkU7odFl5AROxkq4uaROZnnRxlxU39Iy5HBSgWP2SosQBN=w521-h927-s-no-gm?authuser=0" alt="Photo 2">
+                <p>just a touch of your love is enough to keep me going all day</p>
+				<img src="https://lh3.googleusercontent.com/pw/AP1GczMxv539fcyL1mwiEEytMzx6eUBT49YQ2LpW_ZNHT00qBfqldvIFNRpsNDHkFK6-q1K83Rk9KLMffd3d1QIxmDDDyZtfKpKdhWLoWnoQ-6Wn6496Xyrvlu54eZXrb9vbl5LiREARPKqWFaYErSnmeDOB=w521-h927-s-no-gm?authuser=0" alt="Photo 3">
+                <p>my queen is always pretty...I love her more than anything</p>
+				<img src="https://lh3.googleusercontent.com/pw/AP1GczMicu-omu-HOFtT22D9qJXqh7UJps_RV8QVLQBDdP46N1BzmMLa_fFcKhDQyTZero4IydBsEz8HLRhGMkUWwOjXWt59XVHkeqKuuVTFX2GSd4cFCjAprpHYT6NfbBMK2sI1hgRDfWMgY__zUUPrwlya=w521-h927-s-no-gm?authuser=0" alt="Photo 4">
+				<p>I will be there for you even in times of need(I'll fight for you, cause I'm too jealous to let statues or maumau fight for you😁)
+			</div>
+        </div>
+
+        <div class="page" id="page3">
+            <h2>Forever Yours</h2>
+            <p>Thank you for being my sunshine, my joy, and my everything. I love you endlessly, Maureen. Here’s to many more adventures together. 💕</p>
+        </div>
+
+        <div class="page" id="page4">
+            <h2>A special song for a special person</h2>
+			<p>I love you more than anything, my supernova</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OYbgP92QYAQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="navigation">
+            <button onclick="changePage(-1)">Previous</button>
+            <button onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const pages = document.querySelectorAll('.page');
+
+        function changePage(direction) {
+            pages[currentPage - 1].classList.remove('active');
+            currentPage = (currentPage + direction - 1 + pages.length) % pages.length + 1;
+            pages[currentPage - 1].classList.add('active');
+        }
+    </script>
+</body>
+</html>
